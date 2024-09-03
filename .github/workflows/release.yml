@@ -1,0 +1,31 @@
+name: Release
+
+on:
+  push:
+    tags:
+      - v*
+
+jobs:
+  release:
+    name: Release
+
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Checkout submodules
+        run: git submodule update --init --recursive
+
+      - name: Setup 7z
+        run: sudo apt install p7zip-full
+
+      - name: Package
+        run: 7z a LiteLoaderQQNT-KeywordReply-1.0.0.7z LiteLoaderQQNT-Euphony/ src/ LICENSE manifest.json NOTICE
+
+      - name: Release
+        uses: softprops/action-gh-release@v2
+        with:
+          files: LiteLoaderQQNT-KeywordReply-1.0.0.7z

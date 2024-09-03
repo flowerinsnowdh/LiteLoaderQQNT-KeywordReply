@@ -1,0 +1,33 @@
+{
+    "$schema": "./manifest_schema.json",
+    "manifest_version": 4,
+    "type": "extension",
+    "name": "消息关键词回复",
+    "slug": "keyword_reply",
+    "description": "LiteLoaderQQNT 消息关键词回复",
+    "version": "1.0.0",
+    "authors": [
+        {
+            "name": "冬花ice",
+            "link": "https://github.com/flowerinsnowdh"
+        }
+    ],
+    "platform": [
+        "win32",
+        "linux",
+        "darwin"
+    ],
+    "injects": {
+        "renderer": "./src/renderer.js",
+        "main": "./src/main.js",
+        "preload": "./src/preload.js"
+    },
+    "repository": {
+        "repo": "flowerinsnowdh/LiteloaderQQNT-KeywordReply",
+        "branch": "master",
+        "release": {
+            "tag": "v1.0.0",
+            "file": "LiteLoaderQQNT-KeywordReply-1.0.0.7z"
+        }
+    }
+}
