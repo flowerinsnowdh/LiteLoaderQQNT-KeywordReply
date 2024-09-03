@@ -3,6 +3,8 @@
 
 LiteLoaderQQNT本体：[LiteLoaderQQNT](https://github.com/LiteLoaderQQNT/LiteLoaderQQNT)
 
+本项目是临时工具，将不会进行维护
+
 # 安装方法
 
 本插件依赖于 [LiteLoaderQQNT-Euphony](https://github.com/xtaw/LiteLoaderQQNT-Euphony)
